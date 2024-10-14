@@ -8,29 +8,7 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-/*
- * Deve gravar em e ler de um arquivo texto chamado Acao.txt os dados dos objetos do tipo
- * Acao. Seguem abaixo exemplos de linhas.
- *
-    1;PETROBRAS;2024-12-12;30.33
-    2;BANCO DO BRASIL;2026-01-01;21.21
-    3;CORREIOS;2027-11-11;6.12 
- * 
- * A inclusao deve adicionar uma nova linha ao arquivo. Nao e permitido incluir
- * identificador repetido. Neste caso, o metodo deve retornar false. Inclusao com
- * sucesso, retorno true.
- * 
- * A alteracao deve substituir a linha atual por uma nova linha. A linha deve ser
- * localizada por identificador que, quando nao encontrado, enseja retorno false.
- * Alteracao com sucesso, retorno true.
- *   
- * A exclusao deve apagar a linha atual do arquivo. A linha deve ser
- * localizada por identificador que, quando nao encontrado, enseja retorno false.
- * Exclusao com sucesso, retorno true.
- * 
- * A busca deve localizar uma linha por identificador, materializar e retornar um 
- * objeto. Caso o identificador nao seja encontrado no arquivo, retornar null.
- */
+
 public class RepositorioEntidadeOperadora {
     private static final String FILE_NAME = "EntidadeOperadora.txt";
     private static final String TEMP_FILE_NAME = "EntidadeOperadora_temp.txt";

@@ -1,25 +1,5 @@
 package br.com.cesarschool.poo.titulos.entidades;
-/*
- * Esta classe deve ter os seguintes atributos:
- * identificador, do tipo long  FEITO
- * nome, do tipo String  FEITO
- * autorizadoAcao, do tipo double  FEITO
- * saldoAcao, do tipo double FEITO
- * saldoTituloDivida, do tipo double  FEITO
- * 
- * Deve ter um construtor publico que inicializa os atributos identificador, nome   FEITO
- * e autorizadoAcao. Deve ter metodos set/get publicos para os atributos identificador, nome  FEITO
- * e autorizadoAcao. O atributo identificador e read-only fora da classe.  FEITO
- * 
- * Os atributos saldoAcao e saldoTituloDivida devem ter apenas metodos get publicos.  FEITO
- * 
- * Outros metodos publicos:
- * 
- *  void creditarSaldoAcao(double valor): deve adicionar valor ao saldoAcao  FEITO
- *  void debitarSaldoAcao(double valor): deve diminuir valor de saldoAcao  FEITO
- *  void creditarSaldoTituloDivida(double valor): deve adicionar valor ao saldoTituloDivida FEITO
- *  void debitarSaldoTituloDivida(double valor): deve diminuir valor de saldoTituloDivida   FEITO
- */
+
 public class EntidadeOperadora {
     private long identificador;
     private String nome;

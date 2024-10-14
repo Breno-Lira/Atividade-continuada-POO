@@ -8,29 +8,7 @@ import java.util.Scanner;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-/*
- * (FEITO) Deve gravar em e ler de um arquivo texto chamado Acao.txt os dados dos objetos do tipo
- * Acao. Seguem abaixo exemplos de linhas (identificador, nome, dataValidade, valorUnitario)
- * 
-    1;PETROBRAS;2024-12-12;30.33
-    2;BANCO DO BRASIL;2026-01-01;21.21
-    3;CORREIOS;2027-11-11;6.12 
- * 
- * (FEITO) A inclusao deve adicionar uma nova linha ao arquivo. Nao e permitido incluir
- * identificador repetido. Neste caso, o metodo deve retornar false. Inclusao com
- * sucesso, retorno true.
- * 
- * (FEITO) A alteracao deve substituir a linha atual por uma nova linha. A linha deve ser
- * localizada por identificador que, quando nao encontrado, enseja retorno false.
- * Alteracao com sucesso, retorno true.
- *   
- * (FEITO) A exclusao deve apagar a linha atual do arquivo. A linha deve ser
- * localizada por identificador que, quando nao encontrado, enseja retorno false.
- * Exclusao com sucesso, retorno true.
- * 
- * (FEITO) A busca deve localizar uma linha por identificador, materializar e retornar um
- * objeto. Caso o identificador nao seja encontrado no arquivo, retornar null.
- */
+
 public class RepositorioAcao {
 
 	private static final String FILE_NAME = "Acao.txt";

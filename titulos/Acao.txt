@@ -1,3 +1,1 @@
-1;Petrobras;2024-12-12;30.33
-2;Banco do Brasil;2026-01-01;21.21
-3;Banco Central;2000-10-19;19.12
+1;acao-teste2;2024-11-19;140.0
