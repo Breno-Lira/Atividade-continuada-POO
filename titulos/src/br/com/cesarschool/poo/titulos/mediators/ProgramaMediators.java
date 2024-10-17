@@ -63,7 +63,7 @@ public class ProgramaMediators {
         String tituloIncluir = mediator3.incluir(tituloDivida1);
         String tituloAlterar = mediator3.alterar(tituloDivida3);
         //String tituloExcluir = mediator3.excluir(1);
-        TituloDivida tituloBuscar = mediator3.buscar(5);
+        TituloDivida tituloBuscar = mediator3.buscar(1);
 
 
         if (tituloBuscar != null) {
