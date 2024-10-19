@@ -243,7 +243,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    int identificador = Integer.parseInt(AltId.getText());
+                    long identificador = Long.parseLong(AltId.getText());
                     String nome = AltNome.getText();
                     
                     boolean autorizacao = (Boolean) AltAutorizado.getSelectedItem();;
@@ -302,7 +302,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    int idntDelete = Integer.parseInt(DeleteId.getText());
+                    long idntDelete = Long.parseLong(DeleteId.getText());
                                             
                     String excluir = mediatorEntidade.excluir(idntDelete);
                     
@@ -352,7 +352,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    int idBuscar = Integer.parseInt(BuscarId.getText());
+                    long idBuscar = Long.parseLong(BuscarId.getText());
                                             
                     EntidadeOperadora buscar = mediatorEntidade.buscar(idBuscar);
                     

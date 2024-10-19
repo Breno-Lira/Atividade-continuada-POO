@@ -23,7 +23,7 @@ public class MediatorOperacao {
     private MediatorEntidadeOperadora mediatorEntidadeOperadora = new MediatorEntidadeOperadora();
     private RepositorioTransacao repositorioTransacao = new RepositorioTransacao();
 
-    public String realizarOperacao(boolean ehAcao, int entidadeCredito, int idEntidadeDebito,int idAcaoOuTitulo, double valor){
+    public String realizarOperacao(boolean ehAcao, long entidadeCredito, long idEntidadeDebito,int idAcaoOuTitulo, double valor){
         if (valor <= 0){
             return "Valor invalido";
         }

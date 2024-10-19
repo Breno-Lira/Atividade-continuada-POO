@@ -81,7 +81,7 @@ public class RepositorioTransacao {
 	}
 
 
-	public Transacao[] buscarPorEntidadeCredora(int identificadorEntidadeCredito) {
+	public Transacao[] buscarPorEntidadeCredora(long identificadorEntidadeCredito) {
 		List<Transacao> transacoesEncontradas = new ArrayList<>();
 		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -141,7 +141,7 @@ public class RepositorioTransacao {
 		return transacoesEncontradas.toArray(new Transacao[0]);
 	}
 
-	public Transacao[] buscarPorEntidadeCredoraD(int identificadorEntidadeDebito) {
+	public Transacao[] buscarPorEntidadeCredoraD(long identificadorEntidadeDebito) {
 		List<Transacao> transacoesEncontradas = new ArrayList<>();
 		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

@@ -147,10 +147,10 @@ public class TelaTransacao extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    int identificadorC = Integer.parseInt(AddEntidadeC.getText());
+                    long identificadorC = Long.parseLong(AddEntidadeC.getText());
                     EntidadeOperadora entidadeCredito =  mediatorEntidades.buscar(identificadorC);
                     
-                    int identificadorD = Integer.parseInt(AddEntidadeD.getText());
+                    long identificadorD = Long.parseLong(AddEntidadeD.getText());
                     EntidadeOperadora entidadeDebito = mediatorEntidades.buscar(identificadorD);
                     
                     Acao acao = null; 
@@ -248,7 +248,7 @@ public class TelaTransacao extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    int idBuscar = Integer.parseInt(BuscarC.getText());
+                    long idBuscar = Long.parseLong(BuscarC.getText());
                     Transacao[] transacoes = repositorio.buscarPorEntidadeCredora(idBuscar);
                                                                
                     
@@ -341,7 +341,7 @@ public class TelaTransacao extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    int idBuscar = Integer.parseInt(BuscarD.getText());
+                    long idBuscar = Long.parseLong(BuscarD.getText());
                     Transacao[] transacoes = repositorio.buscarPorEntidadeCredoraD(idBuscar);
                                                                
                     
