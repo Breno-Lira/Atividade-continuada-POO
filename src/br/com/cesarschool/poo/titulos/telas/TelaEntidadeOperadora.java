@@ -145,7 +145,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    int identificador = Integer.parseInt(AddId.getText());
+                    long identificador = Long.parseLong(AddId.getText());
                     String nome = AddNome.getText();
                     
                     boolean autorizacao = (Boolean) AddAutorizado.getSelectedItem();
