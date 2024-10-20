@@ -75,7 +75,7 @@ public class MediatorOperacao {
             }
             double valorOperacao = tituloDivida.calcularPrecoTransacao(valor);
             entidadeC.creditarSaldoTituloDivida(valorOperacao);
-            entidadeD.debitarSaldoAcao(valorOperacao);
+            entidadeD.debitarSaldoTituloDivida(valorOperacao);
 
             String alterarC = mediatorEntidadeOperadora.alterar(entidadeC);
             if(alterarC != null){
