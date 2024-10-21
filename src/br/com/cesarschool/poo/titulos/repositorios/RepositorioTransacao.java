@@ -15,20 +15,20 @@ import java.util.Locale;
 
 /*
  * Deve gravar em e ler de um arquivo texto chamado Transacao.txt os dados dos objetos do tipo
- * Transacao. Seguem abaixo exemplos de linhas 
+ * Transacao. Seguem abaixo exemplos de linhas
  * De entidadeCredito: identificador, nome, autorizadoAcao, saldoAcao, saldoTituloDivida.
  * De entidadeDebito: identificador, nome, autorizadoAcao, saldoAcao, saldoTituloDivida.
  * De acao: identificador, nome, dataValidade, valorUnitario OU null
- * De tituloDivida: identificador, nome, dataValidade, taxaJuros OU null. 
+ * De tituloDivida: identificador, nome, dataValidade, taxaJuros OU null.
  * valorOperacao, dataHoraOperacao
  *
- *   002192;BCB;true;0.00;1890220034.0;001112;BOFA;true;12900000210.00;3564234127.0;1;PETROBRAS;2024-12-12;30.33;null;100000.0;2024-01-01 12:22:21 
+ *   002192;BCB;true;0.00;1890220034.0;001112;BOFA;true;12900000210.00;3564234127.0;1;PETROBRAS;2024-12-12;30.33;null;100000.0;2024-01-01 12:22:21
  *   002192;BCB;false;0.00;1890220034.0;001112;BOFA;true;12900000210.00;3564234127.0;null;3;FRANCA;2027-11-11;2.5;100000.0;2024-01-01 12:22:21
  *
  * (FEITO) A inclus�o deve adicionar uma nova linha ao arquivo.
- * 
+ *
  * (FEITO) A busca deve retornar um array de transa��es cuja entidadeCredito tenha identificador igual ao
- * recebido como par�metro.  
+ * recebido como par�metro.
  */
 public class RepositorioTransacao {
 	private static final String FILE_NAME = "Transacao.txt";
@@ -105,6 +105,7 @@ public class RepositorioTransacao {
 
 					// Extraindo os dados de Acao (ou null)
 					Acao acao = null;
+					TituloDivida tituloDivida = null;
 					if (!partes[10].equals("null")) {
 						int idAcao = Integer.parseInt(partes[10]);
 						String nomeAcao = partes[11];
@@ -112,14 +113,11 @@ public class RepositorioTransacao {
 						double valorUnitarioAcao = Double.parseDouble(partes[13]);
 						acao = new Acao(idAcao, nomeAcao, dataValidadeAcao, valorUnitarioAcao);
 					}
-
-					// Extraindo os dados de TituloDivida (ou null)
-					TituloDivida tituloDivida = null;
-					if (!partes[14].equals("null")) {
-						int idTitulo = Integer.parseInt(partes[14]);
-						String nomeTitulo = partes[15];
-						LocalDate dataValidadeTitulo = LocalDate.parse(partes[16], dateFormatter);
-						double taxaJuros = Double.parseDouble(partes[17]);
+					else {
+						int idTitulo = Integer.parseInt(partes[11]);
+						String nomeTitulo = partes[12];
+						LocalDate dataValidadeTitulo = LocalDate.parse(partes[13], dateFormatter);
+						double taxaJuros = Double.parseDouble(partes[14]);
 						tituloDivida = new TituloDivida(idTitulo, nomeTitulo, dataValidadeTitulo, taxaJuros);
 					}
 
@@ -165,6 +163,7 @@ public class RepositorioTransacao {
 
 					// Extraindo os dados de Acao (ou null)
 					Acao acao = null;
+					TituloDivida tituloDivida = null;
 					if (!partes[10].equals("null")) {
 						int idAcao = Integer.parseInt(partes[10]);
 						String nomeAcao = partes[11];
@@ -172,14 +171,11 @@ public class RepositorioTransacao {
 						double valorUnitarioAcao = Double.parseDouble(partes[13]);
 						acao = new Acao(idAcao, nomeAcao, dataValidadeAcao, valorUnitarioAcao);
 					}
-
-					// Extraindo os dados de TituloDivida (ou null)
-					TituloDivida tituloDivida = null;
-					if (!partes[14].equals("null")) {
-						int idTitulo = Integer.parseInt(partes[14]);
-						String nomeTitulo = partes[15];
-						LocalDate dataValidadeTitulo = LocalDate.parse(partes[16], dateFormatter);
-						double taxaJuros = Double.parseDouble(partes[17]);
+					else {
+						int idTitulo = Integer.parseInt(partes[11]);
+						String nomeTitulo = partes[12];
+						LocalDate dataValidadeTitulo = LocalDate.parse(partes[13], dateFormatter);
+						double taxaJuros = Double.parseDouble(partes[14]);
 						tituloDivida = new TituloDivida(idTitulo, nomeTitulo, dataValidadeTitulo, taxaJuros);
 					}
 
