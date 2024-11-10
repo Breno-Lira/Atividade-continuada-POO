@@ -145,7 +145,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    long identificador = Long.parseLong(AddId.getText());
+                    int identificador = Integer.parseInt(AddId.getText());
                     String nome = AddNome.getText();
                     
                     boolean autorizacao = (Boolean) AddAutorizado.getSelectedItem();
@@ -243,7 +243,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    long identificador = Long.parseLong(AltId.getText());
+                    int identificador = Integer.parseInt(AltId.getText());
                     String nome = AltNome.getText();
                     
                     boolean autorizacao = (Boolean) AltAutorizado.getSelectedItem();;
@@ -302,7 +302,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    long idntDelete = Long.parseLong(DeleteId.getText());
+                    int idntDelete = Integer.parseInt(DeleteId.getText());
                                             
                     String excluir = mediatorEntidade.excluir(idntDelete);
                     
@@ -352,7 +352,7 @@ public class TelaEntidadeOperadora extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    long idBuscar = Long.parseLong(BuscarId.getText());
+                    int idBuscar = Integer.parseInt(BuscarId.getText());
                                             
                     EntidadeOperadora buscar = mediatorEntidade.buscar(idBuscar);
                     

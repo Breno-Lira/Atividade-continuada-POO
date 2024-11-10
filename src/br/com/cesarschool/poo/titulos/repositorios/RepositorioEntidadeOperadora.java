@@ -107,7 +107,7 @@ public class RepositorioEntidadeOperadora {
         }
     }
 
-    public boolean excluir(long identificador) {
+    public boolean excluir(int identificador) {
 
         File inputFile = new File(FILE_NAME);
         File tempFile = new File(TEMP_FILE_NAME);
@@ -148,7 +148,7 @@ public class RepositorioEntidadeOperadora {
         }
     }
 
-    public EntidadeOperadora buscar(long identificador) {
+    public EntidadeOperadora buscar(int identificador) {
 
         try (Scanner scanner = new Scanner(new File(FILE_NAME))) {
             while (scanner.hasNextLine()) {

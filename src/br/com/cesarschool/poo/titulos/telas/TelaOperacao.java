@@ -90,11 +90,11 @@ public class TelaOperacao extends JFrame {
 		
 		opC = new JTextField();
 		opC.setColumns(10);
-		opC.setBounds(140, 33, 96, 19);
+		opC.setBounds(114, 33, 96, 19);
 		panel.add(opC);
 		
 		JLabel lblEntidadeCredora = new JLabel("Entidade Credora(Id)");
-		lblEntidadeCredora.setBounds(10, 36, 129, 13);
+		lblEntidadeCredora.setBounds(10, 36, 104, 13);
 		panel.add(lblEntidadeCredora);
 		
 		JLabel lblRealizarOperao = new JLabel("REALIZAR OPERAÇÃO");
@@ -104,11 +104,11 @@ public class TelaOperacao extends JFrame {
 		
 		opD = new JTextField();
 		opD.setColumns(10);
-		opD.setBounds(150, 62, 96, 19);
+		opD.setBounds(124, 62, 96, 19);
 		panel.add(opD);
 		
 		JLabel lblEntidadeDevedora = new JLabel("Entdidade Devedora(Id)");
-		lblEntidadeDevedora.setBounds(10, 65, 143, 13);
+		lblEntidadeDevedora.setBounds(10, 65, 114, 13);
 		panel.add(lblEntidadeDevedora);
 		
 		JLabel textfiledA = new JLabel("Ação(Id)");
@@ -153,10 +153,10 @@ public class TelaOperacao extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     
-                    long identificadorC = Long.parseLong(opC.getText());
+                    int identificadorC = Integer.parseInt(opC.getText());
                     EntidadeOperadora entidadeCredito =  mediatorEntidades.buscar(identificadorC);
                     
-                    long identificadorD = Long.parseLong(opD.getText());
+                    int identificadorD = Integer.parseInt(opD.getText());
                     EntidadeOperadora entidadeDebito = mediatorEntidades.buscar(identificadorD);
                     
                     boolean ehAcao = true;

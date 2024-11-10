@@ -59,7 +59,7 @@ public class MediatorEntidadeOperadora {
         return "Entidade inexistente";
     }
 
-    public String excluir(long identificador) {
+    public String excluir(int identificador) {
         if (identificador <= 0 || identificador >= 100000) {
             return "Entidade inexistente";
         }
@@ -72,7 +72,7 @@ public class MediatorEntidadeOperadora {
         return "Entidade inexistente";
     }
 
-    public EntidadeOperadora buscar(long identificador) {
+    public EntidadeOperadora buscar(int identificador) {
         if (identificador <= 0 || identificador > 100000) {
             return null;
         }
